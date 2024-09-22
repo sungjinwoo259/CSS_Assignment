@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes and Pseudo-elements Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        
+        .hover-example {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .hover-example:hover {
+            background-color: #2980b9;
+        }
+
+        .active-example {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .active-example:active {
+            background-color: #27ae60;
+        }
+
+        .focus-example {
+            padding: 5px;
+            border: 2px solid #95a5a6;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .focus-example:focus {
+            border-color: #3498db;
+        }
+
+        .nth-child-example li:nth-child(odd) {
+            background-color: #ecf0f1;
+        }
+
+        .nth-child-example li:nth-child(even) {
+            background-color: #bdc3c7;
+        }
+
+        
+        .before-after-example {
+            position: relative;
+            padding: 10px;
+            background-color: #f1c40f;
+        }
+
+        .before-after-example::before,
+        .before-after-example::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+        }
+
+        .before-after-example::before {
+            left: -20px;
+            border-right-color: #f1c40f;
+        }
+
+        .before-after-example::after {
+            right: -20px;
+            border-left-color: #f1c40f;
+        }
+
+        .first-letter-example::first-letter {
+            font-size: 2em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .first-line-example::first-line {
+            font-style: italic;
+            color: #8e44ad;
+        }
+
+        /* Combined example */
+        .combined-example {
+            position: relative;
+            padding: 10px;
+            background-color: #1abc9c;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .combined-example:hover {
+            background-color: #16a085;
+        }
+
+        .combined-example::before {
+            content: "★";
+            position: absolute;
+            left: -20px;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        .combined-example:hover::before {
+            left: 10px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-classes and Pseudo-elements Demo</h1>
+
+    <h2>Pseudo-classes</h2>
+
+    <h3>:hover</h3>
+    <div class="hover-example">Hover over me!</div>
+
+    <h3>:active</h3>
+    <div class="active-example">Click and hold me!</div>
+
+    <h3>:focus</h3>
+    <input type="text" class="focus-example" placeholder="Click me to focus">
+
+    <h3>:nth-child</h3>
+    <ul class="nth-child-example">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+        <li>Fifth item</li>
+    </ul>
+
+    <h2>Pseudo-elements</h2>
+
+    <h3>::before and ::after</h3>
+    <div class="before-after-example">I have arrows on both sides!</div>
+
+    <h3>::first-letter</h3>
+    <p class="first-letter-example">This paragraph has a styled first letter.</p>
+
+    <h3>::first-line</h3>
+    <p class="first-line-example">This paragraph has a styled first line.<br>The rest of the text is normal.</p>
+
+    <h2>Combined Example</h2>
+    <div class="combined-example">Hover over me for a combined effect!</div>
+</body>
+</html>

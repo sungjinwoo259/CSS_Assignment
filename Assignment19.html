@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bootstrap Page</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        .navbar {
+            background-color: #3498db;
+        }
+        .jumbotron {
+            background-color: #f4f4f4;
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+        }
+        .custom-btn {
+            background-color: #3498db;
+            border-color: #3498db;
+        }
+        .custom-btn:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Welcome to My Website</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <a class="btn btn-primary btn-lg custom-btn" href="#" role="button">Learn more</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Column 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non ligula in turpis feugiat molestie.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Column 2</h2>
+                <p>Praesent eget neque eu eros interdum malesuada. Ut quis consectetur nunc, at mollis nisl.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Column 3</h2>
+                <p>Fusce eget libero vel nunc malesuada bibendum. Nullam ut erat vitae nisi aliquam bibendum.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start mt-4">
+        <div class="container p-4">
+            <p class="text-center">© 2023 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

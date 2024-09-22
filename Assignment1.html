@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Example</title>
+    <style>
+        p {
+            font-family:cursive;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background-color: #b399ff;
+            padding: 5px;
+        }
+
+        #main-title {
+            color: #333;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        a[target="_blank"] {
+            color: #00a;
+            text-decoration: none;
+            border-bottom: 1px dotted rgb(10, 4, 33);
+        }
+
+        li:nth-child(odd) {
+            background-color: #f0f0f0;
+        }
+
+        p::first-letter {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: rgb(20, 1, 12);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">WELCOME TO CSS SELECTORS EXAMPLE</h1>
+    
+    <p>This is a paragraph styled using an element selector. It demonstrates basic text formatting.</p>
+    
+    <p class="highlight">This paragraph uses a class selector to highlight important information.</p>
+    
+    <h2>List of Items</h2>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+    </ul>
+    
+    <p>Check out <a href="https://www.google.com/" target="_blank">this link</a> styled with an attribute selector.</p>
+    
+    <p>Notice how the first letter of each paragraph is styled differently using a pseudo-element selector.</p>
+</body>
+</html>

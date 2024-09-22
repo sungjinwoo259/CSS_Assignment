@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .image-container {
+            margin-bottom: 2rem;
+        }
+
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .art-direction {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 600px) {
+            .art-direction {
+                content: url('/api/placeholder/400/300');
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .art-direction {
+                content: url('/api/placeholder/800/400');
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .art-direction {
+                content: url('/api/placeholder/1200/600');
+            }
+        }
+
+        .caption {
+            text-align: center;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Images Example</h1>
+
+    <div class="image-container">
+        <h2>1. Using srcset for Resolution Switching</h2>
+        <img class="responsive-image" 
+             srcset="1614224.jpg,
+                    6798127.jpg,
+                     1292533.png"
+             sizes="(max-width: 600px) 400px,
+                    (max-width: 1024px) 800px,
+                    1200px"
+             src="daredevil2.png" 
+             alt="Responsive image example">
+        <p class="caption">This image uses srcset to load different sizes based on viewport width</p>
+    </div>
+
+    <div class="image-container">
+        <h2>2. Using Picture Element for Art Direction</h2>
+        <picture>
+            <source media="(max-width: 600px)" srcset="Naruto Shippuden Wallpapers 9.jpg">
+            <source media="(max-width: 1024px)" srcset="Naruto Shippuden Wallpapers 9.jpg">
+            <img class="responsive-image" src="Naruto Shippuden Wallpapers 9.jpg" alt="Art direction example">
+        </picture>
+        <p class="caption">This image uses the picture element to change aspect ratio on different screen sizes</p>
+    </div>
+
+    <div class="image-container">
+        <h2>3. Using CSS for Art Direction</h2>
+        <img class="art-direction" src="daredevil2.png" alt="CSS art direction example">
+        <p class="caption">This image uses CSS to change the image source for different screen sizes</p>
+    </div>
+</body>
+</html>

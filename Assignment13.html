@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .demo-box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            cursor: pointer;
+        }
+
+        .color-transition {
+            transition: background-color 1s ease;
+        }
+        .color-transition:hover {
+            background-color: #e74c3c;
+        }
+
+        
+        .size-transition {
+            transition: width 0.5s ease-in-out, height 0.5s ease-in-out 0.5s;
+        }
+        .size-transition:hover {
+            width: 200px;
+            height: 200px;
+        }
+
+     
+        .multi-transition {
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .multi-transition:hover {
+            background-color: #2ecc71;
+            transform: rotate(45deg) scale(1.2);
+        }
+
+      
+        .delayed-transition {
+            transition: background-color 0.5s ease 1s;
+        }
+        .delayed-transition:hover {
+            background-color: #f39c12;
+        }
+
+        .text-transition {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100px;
+            transition: width 1s ease-in-out;
+        }
+        .text-transition:hover {
+            width: 300px;
+        }
+
+        
+        .gradient-transition {
+            background: linear-gradient(to right, #3498db 50%, #e74c3c 50%);
+            background-size: 200% 100%;
+            background-position: left bottom;
+            transition: background-position 0.5s ease-in-out;
+        }
+        .gradient-transition:hover {
+            background-position: right bottom;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Transitions Demonstration</h1>
+
+    <h2>1. Color Transition</h2>
+    <p>Hover to see a smooth color transition (1s duration, ease timing)</p>
+    <div class="demo-box color-transition">Hover me</div>
+
+    <h2>2. Size Transition</h2>
+    <p>Hover to see width and height change (0.5s duration each, width starts immediately, height delayed by 0.5s)</p>
+    <div class="demo-box size-transition">Hover me</div>
+
+    <h2>3. Multiple Property Transition</h2>
+    <p>Hover to see color, rotation, and scale change (0.3s duration, custom cubic-bezier timing)</p>
+    <div class="demo-box multi-transition">Hover me</div>
+
+    <h2>4. Delayed Transition</h2>
+    <p>Hover to see a color change after a 1s delay (0.5s duration)</p>
+    <div class="demo-box delayed-transition">Hover me</div>
+
+    <h2>5. Text Reveal Transition</h2>
+    <p>Hover to see the text expand (1s duration, ease-in-out timing)</p>
+    <div class="demo-box text-transition">Hover to see more text appear</div>
+
+    <h2>6. Gradient Transition</h2>
+    <p>Hover to see a gradient slide effect (0.5s duration, ease-in-out timing)</p>
+    <div class="demo-box gradient-transition">Hover me</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage with Media Queries</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .content {
+            flex: 2;
+            background-color: #ecf0f1;
+            padding: 1rem;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        .mobile-only {
+            display: none;
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        body {
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                flex-direction: column;
+            }
+
+            .content, .sidebar {
+                flex: auto;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin-bottom: 0.5rem;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .mobile-only {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Responsive Webpage</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="content">
+                <h2>Main Content</h2>
+                <p>This is the main content area. It will adjust its layout based on the screen size.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+            </section>
+            <aside class="sidebar">
+                <h2>Sidebar</h2>
+                <p>This sidebar will be hidden on mobile devices.</p>
+            </aside>
+        </main>
+        <div class="mobile-only">
+            <h2>Mobile Notice</h2>
+            <p>This section is only visible on mobile devices.</p>
+        </div>
+    </div>
+</body>
+</html>

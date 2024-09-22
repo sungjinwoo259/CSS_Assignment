@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Basics Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            background-color: #f0f0f0;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .flex-item {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .justify-content {
+            justify-content: space-between;
+        }
+
+        .align-items {
+            height: 150px;
+            align-items: center;
+        }
+
+        .flex-direction {
+            flex-direction: column;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Basics Demo</h1>
+
+    <h2>Default Flex (Row)</h2>
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <h2>Justify Content: Space Between</h2>
+    <div class="flex-container justify-content">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <h2>Align Items: Center</h2>
+    <div class="flex-container align-items">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <h2>Flex Direction: Column</h2>
+    <div class="flex-container flex-direction">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+</body>
+</html>

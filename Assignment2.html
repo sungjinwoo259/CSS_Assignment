@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Color and Background Properties Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .color-demo {
+            color: #ff6600;
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .gradient-demo {
+            background: linear-gradient(to right, #ff6600, #ff00ff);
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .radial-gradient-demo {
+            background: radial-gradient(circle, #ff6600, #ff00ff);
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .background-image-demo {
+            background-image: url('Naruto Shippuden Wallpapers 9.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 200px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .background-repeat-demo {
+            background-image: url('daredevil.jpg');
+            background-repeat: repeat-x;
+            height: 200px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .background-position-demo {
+            background-image: url('daredevil2.png');
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            height: 200px;
+            margin-bottom: 20px;
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Color and Background Properties Demo</h1>
+
+        <div class="color-demo">
+            <h2>Color and Background-color</h2>
+            <p>This section demonstrates the use of color and background-color properties.</p>
+        </div>
+
+        <div class="gradient-demo">
+            <h2>Linear Gradient</h2>
+            <p>This section shows a linear gradient background.</p>
+        </div>
+
+        <div class="radial-gradient-demo">
+            <h2>Radial Gradient</h2>
+            <p>This section displays a radial gradient background.</p>
+        </div>
+
+        <div class="background-image-demo">
+            <h2>Background Image</h2>
+        </div>
+
+        <div class="background-repeat-demo">
+            <h2>Background Repeat</h2>
+        </div>
+
+        <div class="background-position-demo">
+            <h2>Background Position</h2>
+        </div>
+    </div>
+</body>
+</html>

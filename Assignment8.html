@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Responsive CSS Grid Layout with Colors</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav main aside"
+                "footer footer footer";
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            gap: 10px;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: #ffffff;
+            border: 1px solid #d1d5db;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header { 
+            grid-area: header;
+            background-color: #3b82f6;
+            color: white;
+        }
+        .nav { 
+            grid-area: nav;
+            background-color: #60a5fa;
+            color: white;
+        }
+        .main { 
+            grid-area: main;
+            background-color: #ffffff;
+        }
+        .aside { 
+            grid-area: aside;
+            background-color: #93c5fd;
+            color: #1e3a8a;
+        }
+        .footer { 
+            grid-area: footer;
+            background-color: #1e40af;
+            color: white;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .article {
+            grid-column: span 2;
+            background-color: #e0f2fe;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .widget {
+            background-color: #bfdbfe;
+            padding: 15px;
+            border-radius: 8px;
+            color: #1e3a8a;
+        }
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "aside"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+            .main {
+                grid-template-columns: 1fr;
+            }
+            .article {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="grid-item header">Header</header>
+        <nav class="grid-item nav">Navigation</nav>
+        <main class="grid-item main">
+            <article class="article">
+                <h2>Main Article</h2>
+                <p>This is the main content area, which spans two columns in the nested grid.</p>
+            </article>
+            <div class="widget">Widget 1</div>
+            <div class="widget">Widget 2</div>
+        </main>
+        <aside class="grid-item aside">Sidebar</aside>
+        <footer class="grid-item footer">Footer</footer>
+    </div>
+</body>
+</html>

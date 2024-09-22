@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 800px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .translate:hover {
+            transform: translate(20px, 20px);
+        }
+
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        .scale:hover {
+            transform: scale(1.5);
+        }
+
+        .skew:hover {
+            transform: skew(20deg, 10deg);
+        }
+
+        .multiple:hover {
+            transform: translate(10px, 10px) rotate(30deg) scale(1.2);
+        }
+
+        .origin {
+            transform-origin: top left;
+        }
+
+        .origin:hover {
+            transform: rotate(45deg);
+        }
+
+        .perspective-container {
+            perspective: 500px;
+        }
+
+        .perspective-box {
+            transform: rotateY(45deg);
+        }
+
+        .preserve3d {
+            transform-style: preserve-3d;
+            transform: rotateX(45deg) rotateY(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate">Translate</div>
+        <div class="box rotate">Rotate</div>
+        <div class="box scale">Scale</div>
+        <div class="box skew">Skew</div>
+        <div class="box multiple">Multiple</div>
+        <div class="box origin">Origin</div>
+        <div class="perspective-container">
+            <div class="box perspective-box">Perspective</div>
+        </div>
+        <div class="box preserve3d">Preserve 3D</div>
+    </div>
+</body>
+</html>
